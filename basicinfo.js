@@ -3,6 +3,7 @@ function mailValidation()
 var x=document.getElementById("eid").value;
 var pattern="^[A-Za-z0-9]+[@]{1}[a-z]+(.com|.co.in.|.in)$";
 if(x==null||x==""){
+	document.getElementById("errormail").style.color="red";
 document.getElementById("errormail").innerHTML="plz enter email";
 return false;
 }
@@ -20,6 +21,7 @@ function pwdValidation()
 	var Value=document.getElementById("pid").value;
 	var pwdPattern="^[A-Za-z0-9@!#$&*]{8,}$";
 	if(Value==null||Value==""){
+		document.getElementById("errorpwd").style.color="red";
 document.getElementById("errorpwd").innerHTML="plz enter password";
 return false;
 }
@@ -37,6 +39,7 @@ function confirmpwdValidation()
 	var password=document.getElementById("pid").value;
 	var confirmpwd=document.getElementById("pid1").value;
 	if(confirmpwd==null||confirmpwd==""){
+		document.getElementById("errorpwd1").style.color="red";
 document.getElementById("errorpwd1").innerHTML="plz enter password";
 return false;
 }
@@ -54,6 +57,7 @@ function userValidation()
 	var userValue=document.getElementById("txtname").value;
 	var namePattern="^[A-Za-z]+$";
 	if(userValue==null||userValue==""){
+		document.getElementById("errorname").style.color="red";
 document.getElementById("errorname").innerHTML="plz enter name";
 return false;
 }
@@ -71,6 +75,7 @@ function fnameValidation()
 	var userValue=document.getElementById("fname").value;
 	var namePattern="^[A-Za-z]+$";
 	if(userValue==null||userValue==""){
+		document.getElementById("errorFname").style.color="red";
 document.getElementById("errorFname").innerHTML="plz enter Fathers name";
 return false;
 }
@@ -88,6 +93,7 @@ function mnameValidation()
 	var userValue=document.getElementById("mname").value;
 	var namePattern="^[A-Za-z]+$";
 	if(userValue==null||userValue==""){
+		document.getElementById("errorMname").style.color="red";
 document.getElementById("errorMname").innerHTML="plz enter mothers name";
 return false;
 }
@@ -105,6 +111,7 @@ function dtValidation()
 {
 var x=document.getElementById("dt").value;
 if(x==null||x==""){
+	document.getElementById("errordt").style.color="red";
 document.getElementById("errordt").innerHTML="plz enter DOB";
 return false;
 }
@@ -124,6 +131,7 @@ function genderValidation()
 	}
 	if(count==0)
 	{
+		document.getElementById("errorGender").style.color="red";
 		document.getElementById("errorGender").innerHTML="select atleast one gender";
 		return false;
 	}
@@ -136,6 +144,7 @@ function addrValidation()
 {
 var x=document.getElementById("addr").value;
 if(x==null||x==""){
+	document.getElementById("errorAddr").style.color="red";
 document.getElementById("errorAddr").innerHTML="plz enter address";
 return false;
 }
@@ -149,6 +158,7 @@ function numValidation()
 var x=document.getElementById("num").value;
 var pattern="^[6-9]{1}[0-9]{9}$";
 if(x==0||x==""){
+	document.getElementById("errorNum").style.color="red";
 document.getElementById("errorNum").innerHTML="plz enter phno";
 return false;
 }
